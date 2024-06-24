@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hypixel Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
             background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
         }
         .post-form {
             margin-bottom: 20px;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .post-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 10px;
             font-size: 16px;
+            resize: vertical;
         }
         .post-form button {
             background-color: #007bff;
@@ -34,37 +37,40 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
         .post-form button:hover {
             background-color: #0056b3;
         }
         .post {
             border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .comment-form {
-            margin-top: 10px;
+            margin-top: 20px;
         }
         .comment-form textarea {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             font-size: 14px;
+            resize: vertical;
         }
         .comment-form button {
             background-color: #28a745;
             color: #fff;
             border: none;
-            padding: 5px 10px;
+            padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
+            transition: background-color 0.3s ease;
         }
         .comment-form button:hover {
             background-color: #218838;
@@ -78,6 +84,8 @@
         }
         h1 {
             color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -149,7 +157,7 @@
                     <button onclick="saveComment(this)">Сохранить комментарий</button>
                 </div>
                 <div class="comments-container"></div>
-            `;
+                `;
 
             const commentsContainer = postContainer.querySelector('.comments-container');
             post.comments.forEach(comment => {

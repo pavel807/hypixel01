@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости Hypixel</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .news-item h2 {
+            color: #333;
+        }
+
+        .news-item p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Новости Hypixel</h1>
+    </header>
+    <div class="container">
+        <div class="news-item">
+            <h2>Обновление SkyBlock</h2>
+            <p>Сегодня вышло новое обновление для SkyBlock, которое включает в себя множество новых функций и улучшений.</p>
+        </div>
+        <div class="news-item">
+            <h2>Новый мини-игра: Tower Wars</h2>
+            <p>Hypixel представил новую мини-игру под названием Tower Wars. Попробуйте свои силы в этой захватывающей стратегической игре!</p>
+        </div>
+        <div class="news-item">
+            <h2>Событие Double Coins Weekend</h2>
+            <p>На этих выходных пройдет событие Double Coins Weekend, где вы сможете заработать в два раза больше монет в своих любимых играх.</p>
+        </div>
+    </div>
+</body>
+</html>
