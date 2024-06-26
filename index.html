@@ -11,10 +11,12 @@
             text-align: center;
         }
         .vip, .vip_plus, .mvp, .mvp_plus, .mvp_plus_plus {
-            width: 30%;
+            width: 100%; /* Make images responsive */
+            max-width: 200px; /* Set a max width for images */
         }
         .hypixel1 {
-            width: 30%;
+            width: 100%; /* Make image responsive */
+            max-width: 200px; /* Set a max width for image */
             text-align: center;
         }
         .mail {
@@ -27,11 +29,13 @@
         }
         .ranks {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: center; /* Center items */
         }
         .rank-item {
-            margin-right: 20px;
+            margin: 10px; /* Add some margin */
             text-align: center;
+            flex: 1 1 200px; /* Make items flexible */
         }
         .header-container {
             display: flex;
@@ -48,10 +52,11 @@
         .but {
             margin-top: 20px;
             display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap */
             justify-content: center;
         }
         .but button {
-            margin: 0 5px;
+            margin: 5px; /* Adjust margin for better spacing */
             padding: 10px 20px;
             border: none;
             background-color: #00cff3; 
@@ -64,6 +69,16 @@
         }
         .creators-container p {
             margin-bottom: 10px; /* Add some space between the text and the image */
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .rank-item {
+                flex: 1 1 100%; /* Make items take full width on small screens */
+            }
+            .vip, .vip_plus, .mvp, .mvp_plus, .mvp_plus_plus, .hypixel1 {
+                max-width: 100%; /* Ensure images don't exceed container width */
+            }
         }
     </style>
 </head>
@@ -79,7 +94,7 @@
                 <p>Получите VIP-звание на сервере Hypixel Minecraft, на форумах Hypixel и в Hypixel Discord.</p>
             </div>
             <div class="rank-item">
-                <img src="img/gold_rang .png" class="vip_plus">
+                <img src="img/gold_rang.png" class="vip_plus">
                 <h2>VIP+</h2>
                 <p>Получите звание VIP+ на сервере Hypixel Minecraft, на форумах Hypixel и в Hypixel Discord.</p>
             </div>
@@ -107,8 +122,7 @@
                 <button ><a href="page3.html">News Hypixel</a></button>
                 <button><a href="page4.html">Информация о Hypixel</a></button>
                 <button><a href="page5.html">Что такое Hypixel</a></button>
-                <button><a href="page6.html">6</a></button>
-                
+                <button><a href="page6.html">Животные компаньены в HyPixel</a></button>
             </div>
             <p>Саймон Коллинз-Лафламм и Филипп Тушетт (simon и HyPixel)</p>
             <img src="img/hypixel.png" class="hypixel1">
