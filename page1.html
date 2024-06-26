@@ -13,6 +13,20 @@
             color: #333;
             line-height: 1.6;
         }
+        #backButton {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        #backButton:hover {
+            background-color: #c82333;
+        }
         .post-form {
             margin-bottom: 20px;
             background-color: #fff;
@@ -90,6 +104,7 @@
     </style>
 </head>
 <body>
+    <button id="backButton" onclick="goBack()">Назад к главной странице</button>
     <h1>Hypixel Posts</h1>
     <div class="post-form">
         <textarea id="postContent" rows="4" cols="50" placeholder="Напишите ваш пост..."></textarea><br>
@@ -168,6 +183,10 @@
             });
 
             document.getElementById('postsContainer').appendChild(postContainer);
+        }
+
+        function goBack() {
+            window.location.href = 'index.html'; // Change 'index.html' to the URL of your main page
         }
     </script>
 </body>

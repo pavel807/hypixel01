@@ -7,6 +7,20 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+        #backButton {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        #backButton:hover {
+            background-color: #c82333;
+        }
         .container {
             width: 300px;
             margin: 0 auto;
@@ -48,6 +62,8 @@
     </style>
 </head>
 <body>
+    <button id="backButton" onclick="goBack()">Назад к главной странице</button>
+    
     <div class="container">
         <h2>Авторизация</h2>
         
@@ -73,8 +89,12 @@
                     alert("Неправильный пароль или логин")
                 }
             }
+            
 
             button.onclick = enter
+            function goBack() {
+            window.location.href = 'index.html'; // Change 'index.html' to the URL of your main page
+        }
         
     </script>
 </body>

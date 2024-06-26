@@ -33,6 +33,20 @@
             animation: fadeIn 1s ease-in-out, rainbow 10s infinite;
             color: #333;
         }
+        #backButton {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        #backButton:hover {
+            background-color: #c82333;
+        }
 
         header {
             background-color: #444;
@@ -76,6 +90,7 @@
     </style>
 </head>
 <body>
+    <button id="backButton" onclick="goBack()">Назад к главной странице</button>
     <header>
         <h1>Новости Hypixel</h1>
     </header>
@@ -93,5 +108,10 @@
             <p>На этих выходных пройдет событие Double Coins Weekend, где вы сможете заработать в два раза больше монет в своих любимых играх.</p>
         </div>
     </div>
+    <script>
+           function goBack() {
+            window.location.href = 'index.html'; // Change 'index.html' to the URL of your main page
+        }
+    </script>
 </body>
 </html>
