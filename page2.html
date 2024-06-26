@@ -25,6 +25,7 @@
             width: 300px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -36,12 +37,14 @@
         }
         label {
             display: block;
+            
             margin-bottom: 10px;
         }
         input[type="text"],
         input[type="password"] {
-            width: 100%;
+            width: 80%;
             padding: 10px;
+            text-align: center;
             margin-bottom: 15px;
             border-radius: 3px;
             border: 1px solid #ddd;
@@ -58,15 +61,17 @@
         }
         input[type="submit"]:hover {
             background-color: #45a049;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <button id="backButton" onclick="goBack()">Назад к главной странице</button>
+    
     
     <div class="container">
+        <button id="backButton" onclick="goBack()">Назад к главной странице</button>
         <h2>Авторизация</h2>
-        
+            
             <label for="username">Имя пользователя:</label>
             <input type="text" id="username" name="username" placeholder="Введите имя пользователя" autofocus required>
             <label for="password">Пароль:</label>
